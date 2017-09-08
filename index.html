@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Whack-A-Mole</title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<main class="game" id="wam">
+		<h1>Whack-A-Mole Game</h1>
+		<div class="row">
+			<div class="mole active"></div>
+		    <div class="mole"></div>
+		    <div class="mole"></div>
+		</div>
+		<div class="row">
+			<div class="mole"></div>
+		    <div class="mole"></div>
+		    <div class="mole"></div>
+		</div>
+		<div class="row">
+			<div class="mole"></div>
+			<div class="mole"></div>
+			<div class="mole"></div>
+		</div>
+
+		<h5 class="score">Score: <span id="score">0</span></h5>
+	</main>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var wam = new WhackAMole();
+			wam.init({
+				gameEl: document.getElementById('wam'),
+				moleEls: document.getElementsByClassName('mole'),
+				scoreEl: document.getElementById('score'),
+				activeClass: 'active'
+			});
+		}
+	</script>
+</body>
+</html>
