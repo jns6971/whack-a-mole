@@ -103,7 +103,7 @@ h5 {
 	background-image: url('images/mole.png');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100%;
+	background-size: contain;
 	cursor: pointer;
 }
 
